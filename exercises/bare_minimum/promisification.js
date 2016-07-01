@@ -38,7 +38,7 @@ var generateRandomToken = function(callback) {
   });
 };
 
-var getGitHubProfileAsync; // TODO
+var generateRandomTokenAsync; // TODO
 
 
 // (3) Asyncronous file manipulation
