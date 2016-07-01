@@ -17,9 +17,10 @@ var pf = require('./promisification.js');
 var fetchProfileAndWriteToFile = function(readFilePath, writeFilePath) {
   return pc.pluckFirstLineFromFileAsync(readFilePath)
     .then(pf.getGitHubProfileAsync)
-    .then( profile => {
+    .then(profile => {
       fs.writeFileSync(writeFilePath, JSON.stringify(profile), 'utf8');
-    }).catch(err => {
+    })
+    .catch(err => {
       console.log(err);
     });
 };
